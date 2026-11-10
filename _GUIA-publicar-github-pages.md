@@ -19,9 +19,10 @@ No canto superior direito, clique no **+** → **New repository**.
 - Marque **Public**.
 - Clique em **Create repository**.
 
-**3. Subir o seu `index.html`.**
+**3. Subir os arquivos do portfólio.**
 Na página do repositório novo, clique em **uploading an existing file** (ou **Add file → Upload files**).
-- Arraste o seu `index.html` pra área de upload.
+- Arraste `index.html`, `minhafoto.jpg` e `carimbo_tiago_foto-256.png` pra área de upload.
+- Inclua também qualquer outro arquivo de imagem usado pela página.
 - Lá embaixo, clique em **Commit changes**.
 
 **4. Ativar o GitHub Pages.**

@@ -1,417 +1,492 @@
 <!DOCTYPE html>
-<!--
-  PORTFOLIO PROFISSIONAL - Consultoria Freela (Dev em Dobro)
-  Pagina pronta pro aluno publicar como seu portfolio/cartao de visitas.
-  Self-contained: depende so das fontes Google (Bricolage Grotesque + Manrope).
-  Sem build, sem JS externo, sem framework. Funciona aberto direto (file://) e publicado.
-
-  COMO PERSONALIZAR (Ctrl+F):
-    Tiago Bresolin     -> seu nome
-    Parobé   -> sua cidade
-    SEU_WHATSAPP   -> seu numero so com numeros (ex: 5585999998888)
-    [SEU EMAIL]    -> tiagoblink182@gmail.com
-  Guias completos: _GUIA-personalizar.md e _GUIA-publicar-github-pages.md
--->
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tiago Bresolin | Sites, agentes de IA e sistemas que vendem</title>
-<meta name="description" content="Crio sites, sistemas e agentes de IA para empresas que querem atrair mais clientes e construir autoridade online.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tiago Bresolin | Sites e WhatsApp para negócios em Parobé/RS</title>
+<meta name="description" content="Crio sites, atendimento automático no WhatsApp e sistemas simples para negócios locais. Direto com quem desenvolve, de Parobé/RS para todo o Brasil.">
 <meta name="author" content="Tiago Bresolin">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="./">
+<meta name="theme-color" content="#f4f9fd">
+<link rel="canonical" href="https://tiagoblink182.github.io/MeuPortfolio/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Tiago Bresolin | Sites, agentes de IA e sistemas que vendem">
-<meta property="og:description" content="Sites, sistemas e agentes de IA para empresas que querem atrair mais clientes e construir autoridade online.">
-<meta property="og:url" content="./">
-<meta property="og:image" content="minhafoto.jpg">
+<meta property="og:title" content="Tiago Bresolin | Sites e WhatsApp para negócios em Parobé/RS">
+<meta property="og:description" content="Sites, atendimento automático no WhatsApp e sistemas simples para negócios locais.">
+<meta property="og:url" content="https://tiagoblink182.github.io/MeuPortfolio/">
+<meta property="og:image" content="https://tiagoblink182.github.io/MeuPortfolio/minhafoto.jpg">
 <meta property="og:image:alt" content="Tiago Bresolin">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tiago Bresolin | Sites, agentes de IA e sistemas que vendem">
-<meta name="twitter:description" content="Sites, sistemas e agentes de IA para empresas que querem atrair mais clientes e construir autoridade online.">
-<meta name="twitter:image" content="minhafoto.jpg">
-<meta name="theme-color" content="#168bd2">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tiago Bresolin | Sites e WhatsApp para negócios em Parobé/RS">
+<meta name="twitter:description" content="Sites, atendimento automático no WhatsApp e sistemas simples para negócios locais.">
+<meta name="twitter:image" content="https://tiagoblink182.github.io/MeuPortfolio/minhafoto.jpg">
+<meta name="twitter:image:alt" content="Tiago Bresolin">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23168bd2'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="carimbo_tiago_foto-256.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Tiago Bresolin",
-  "description": "Sites, sistemas e agentes de IA para empresas que querem atrair mais clientes e construir autoridade online.",
-  "url": "./",
-  "image": "minhafoto.jpg",
+  "description": "Sites, atendimento automático no WhatsApp e sistemas simples para negócios locais.",
+  "url": "https://tiagoblink182.github.io/MeuPortfolio/",
+  "image": "https://tiagoblink182.github.io/MeuPortfolio/minhafoto.jpg",
   "email": "tiagoblink182@gmail.com",
+  "telephone": "+5551993416111",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Parobé",
+    "addressRegion": "RS",
+    "addressCountry": "BR"
+  },
   "areaServed": "BR",
   "founder": {
     "@type": "Person",
     "name": "Tiago Bresolin"
   },
-  "sameAs": [
-    "https://github.com/tiagoblink182"
-  ]
+  "sameAs": ["https://github.com/tiagoblink182"]
 }
 </script>
 <style>
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { margin: 0; }
-  a { color: #075a9c; text-decoration: none; }
-  a:hover { color: #034777; }
-  ::selection { background: #cbe8fb; }
-  img { display: block; max-width: 100%; }
-
-  @keyframes bubbleIn { from { opacity: 0; transform: translateY(14px) scale(.97); } to { opacity: 1; transform: none; } }
-  @keyframes floatY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-  @keyframes softglow { 0%,100% { opacity:.5; } 50% { opacity:.85; } }
-  @keyframes pulsingGlow { 0%,100% { box-shadow: 0 0 0 0 rgba(7,90,156,.16), 0 6px 18px -8px rgba(7,90,156,.7); } 50% { box-shadow: 0 0 0 12px rgba(7,90,156,.24), 0 12px 28px -8px rgba(7,90,156,.8); } }
-  @keyframes pulsingGlowGreen { 0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,.16), 0 6px 18px -8px rgba(37,211,102,.7); } 50% { box-shadow: 0 0 0 12px rgba(37,211,102,.24), 0 12px 28px -8px rgba(37,211,102,.8); } }
-
-  /* hover (substitui o style-hover do editor) */
-  .hv-primary:hover { background: #034777 !important; transform: translateY(-1px); }
-  .hv-ghost:hover { background: #034777 !important; border-color: #034777 !important; color: #fff !important; }
-  .hv-card { transition: transform .2s, box-shadow .2s; }
-  .hv-card:hover { transform: translateY(-4px); box-shadow: 0 24px 50px -30px rgba(13,27,22,.35); }
-  .hv-lift:hover { transform: translateY(-2px); }
-  .hv-white:hover { color: #fff !important; }
-  .chat-message { color: #09192e; font-size: 14px; line-height: 1.4; padding: 9px 12px; box-shadow: 0 1px 1px rgba(0,0,0,.08); animation: bubbleIn .5s ease both; }
-  .chat-message--incoming { align-self: flex-start; max-width: 82%; background: #fff; border-radius: 4px 12px 12px 12px; }
-  .chat-message--outgoing { align-self: flex-end; max-width: 84%; background: #d9efff; border-radius: 12px 4px 12px 12px; }
-  .chat-time { display: block; text-align: right; font-size: 10px; margin-top: 3px; }
-  .chat-time--incoming { color: #71869b; }
-  .chat-time--outgoing { color: #286b9c; }
-  .project-card { background: linear-gradient(135deg, rgba(22,139,210,.1), rgba(22,139,210,.05)); border: 1px solid #dce8f1; border-radius: 20px; padding: 30px; text-decoration: none; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; }
-  .card-icon { width: 52px; height: 52px; border-radius: 14px; background: #eaf5ff; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
-  .project-image { width: 38.4px; height: 38.4px; object-fit: contain; }
-  .card-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; margin: 0 0 10px; color: #09192e; }
-  .card-description { margin: 0; font-size: 15.5px; line-height: 1.6; color: #4a5b70; }
-  .project-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; color: #075a9c; font-weight: 600; font-size: 14px; }
-  .project-arrow { font-size: 18px; }
-  .step-number { width: 46px; height: 46px; border-radius: 12px; background: #075a9c; color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque',sans-serif; font-weight: 800; font-size: 20px; margin-bottom: 20px; }
-  .step-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; margin: 0 0 9px; color: #09192e; }
-  .nav-services { position: relative; transition: color .2s; }
-  .nav-services::after { content: ''; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; background: #075a9c; transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
-  .nav-services:hover { color: #075a9c !important; }
-  .nav-services:hover::after { transform: scaleX(1); }
-  .pulsing-glow { animation: pulsingGlow 2.4s ease-in-out infinite; }
-  .float-wa.pulsing-glow { animation-name: pulsingGlowGreen; }
-  a:focus-visible { outline: 3px solid #168bd2; outline-offset: 3px; }
-
-  .nav-cta-label-mobile { display: none; }
-
-  /* responsivo */
-  @media (max-width: 900px) {
-    .hero-grid { grid-template-columns: 1fr !important; gap: 44px !important; padding: 52px 24px 64px !important; }
-    .ad-grid, .svc-grid, .steps-grid, .about-grid { grid-template-columns: 1fr !important; }
-    .h1-hero { font-size: 40px !important; }
-    .h2-big { font-size: 32px !important; }
-    .sec-pad { padding: 64px 24px !important; }
-    .about-photo { max-width: 320px; }
-  }
-  @media (max-width: 480px) {
-    header > div { padding: 12px 16px !important; }
-    header nav { gap: 12px !important; }
-    header nav > a:first-child { display: none; }
-    .nav-cta-label { display: none; }
-    .nav-cta-label-mobile { display: inline; }
-    .float-wa { right: 14px !important; bottom: calc(14px + env(safe-area-inset-bottom)) !important; padding: 12px 15px !important; }
-    .h1-hero { font-size: 33px !important; }
-    .h2-big { font-size: 27px !important; }
-    .cta-big { font-size: 30px !important; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    * { animation: none !important; }
-    .hv-card, .hv-primary, .hv-lift { transition: none !important; }
-  }
+:root{--paper:#f4f9fd;--paper2:#eaf5ff;--ink:#09192e;--muted:#40536a;--red:#075a9c;--red-d:#034777;--green:#075a9c;--line:#dce8f1;--r:6px;
+--serif:'Fraunces',Georgia,serif;--sans:'Manrope',system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);line-height:1.04;letter-spacing:-.02em;margin:0}
+h1{font-weight:800;font-size:clamp(40px,7vw,84px)}h2{font-weight:800;font-size:clamp(30px,4.6vw,52px)}h3{font-weight:600;font-size:22px;line-height:1.2}
+em{font-style:italic;color:var(--red)}
+.eyebrow{font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin:0 0 14px}
+section{padding:88px 0}
+.skip{position:absolute;left:-999px;background:var(--ink);color:#fff;padding:10px 16px;z-index:100}.skip:focus{left:8px;top:8px}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(244,249,253,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:84px}
+.logo{display:flex;align-items:center;gap:9px;font:800 20px var(--serif);text-decoration:none}.logo i{color:var(--red);font-style:normal}
+.logo-mark{width:68px;height:68px;object-fit:cover;border-radius:50%;animation:logo-bounce 3.6s ease-in-out infinite;box-shadow:0 4px 0 rgba(9,25,46,.14)}
+@keyframes logo-bounce{0%,100%{transform:translateY(0);box-shadow:0 4px 0 rgba(9,25,46,.14)}50%{transform:translateY(-7px);box-shadow:0 11px 0 rgba(9,25,46,.06)}}
+nav{display:flex;align-items:center;gap:26px}nav a{font-weight:700;font-size:14.5px;text-decoration:none}
+nav a.lk:hover{color:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-weight:700;font-size:16px;padding:15px 24px;border-radius:var(--r);border:0;text-decoration:none;cursor:pointer;font-family:var(--sans);transition:background .2s,transform .2s}
+.btn:hover{background:var(--red-d);transform:translateY(-2px)}.btn svg{width:20px;height:20px;fill:currentColor}
+.btn.sm{padding:10px 16px;font-size:14.5px}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}.btn.line:hover{background:var(--ink);color:var(--paper)}
+.btn.projects-link:hover{background:#168bd2;color:#fff;box-shadow:inset 0 0 0 2px #168bd2}
+.pulse-blue{animation:blue-glow 2.8s ease-in-out infinite}
+.pulse-white{animation:white-glow 2.8s ease-in-out infinite}
+@keyframes blue-glow{0%,100%{box-shadow:0 0 0 0 rgba(22,139,210,0)}50%{box-shadow:0 0 18px 4px rgba(22,139,210,.62)}}
+@keyframes white-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}50%{box-shadow:0 0 20px 5px rgba(255,255,255,.72)}}
+/* hero */
+.hero{padding:132px 0 80px}
+.hero-layout{display:grid;grid-template-columns:1.08fr .92fr;gap:36px;align-items:center}
+.hero-copy h1{font-size:clamp(38px,4.5vw,62px);line-height:1.06}
+.hero-copy h1 span{display:block}
+.hero p.lead{font-size:clamp(18px,2.2vw,22px);max-width:600px;margin:28px 0 0;color:#344963}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.chat-demo{width:100%;max-width:390px;justify-self:end}
+.phone{padding:9px;border:3px solid #14233a;border-radius:38px;background:#0e1e33;box-shadow:0 24px 60px rgba(9,25,46,.2)}
+.phone-screen{min-height:470px;padding:12px 14px 18px;border-radius:27px;background:#e8f3ec;overflow:hidden}
+.phone-notch{width:82px;height:17px;margin:-12px auto 10px;border-radius:0 0 12px 12px;background:#0e1e33}
+.phone-status{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;color:#213247;font-size:11px;font-weight:700}
+.phone-contact{display:flex;align-items:center;gap:10px;margin:0 -14px;padding:10px 14px;background:#f8fbf9;border-bottom:1px solid #d5e4d9}
+.contact-avatar{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:50%;background:#c9e6d3;color:#1f6340;font-weight:800}
+.contact-name{font-size:14px;font-weight:800;line-height:1.2}.contact-status{display:block;margin-top:3px;color:#52705e;font-size:11px}
+.phone-chat{display:grid;gap:12px;padding-top:18px}
+.bub{max-width:88%;padding:11px 13px;border-radius:15px;font-size:14px;line-height:1.45;overflow-wrap:anywhere;box-shadow:0 1px 2px rgba(9,25,46,.08)}
+.bub.c{justify-self:start;background:#fff;border-bottom-left-radius:4px}
+.bub.m{justify-self:end;background:#d5f4ce;border-bottom-right-radius:4px}
+.bub small{display:block;margin-top:5px;color:#54705a;font-size:10.5px;line-height:1.35}
+.chat-gap{max-width:95%;justify-self:center;padding:8px 10px;border-radius:10px;background:rgba(9,25,46,.07);color:#43586d;text-align:center;font-size:11.5px;line-height:1.45}
+.phone.is-typing .after-typing{visibility:hidden}.phone.is-typing .after-typing.is-visible{visibility:visible}
+.phone.is-typing .bub.m{visibility:hidden}.phone.is-typing.is-replying .bub.m{visibility:visible}
+.type-cursor::after{content:"";display:inline-block;height:1em;margin-left:2px;border-right:2px solid currentColor;vertical-align:-.15em;animation:cursor-blink .8s steps(2,start) infinite}
+@keyframes cursor-blink{to{visibility:hidden}}
+.phone-caption{margin:12px 0 0;color:#52677d;text-align:center;font-size:12px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* problems */
+.dark{background:var(--ink);color:var(--paper)}
+.dark .eyebrow{color:#87caf5}
+.sub{max-width:620px;margin:16px 0 0;color:var(--muted)}.dark .sub{color:#b8cce0}
+.checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;gap:12px;margin-top:44px}
+.chk{position:relative}.chk input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+.chk span{display:flex;height:100%;gap:14px;align-items:flex-start;padding:20px;border:1.5px solid #1b385b;border-radius:var(--r);transition:.2s;font-weight:500}
+.chk span::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border:2px solid #5a7899;border-radius:4px;transition:.2s}
+.chk input:checked+span{border-color:#168bd2;background:#0e2545}
+.chk input:checked+span::before{background:#168bd2 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E") center/16px no-repeat;border-color:#168bd2}
+.chk input:focus-visible+span{outline:3px solid #87caf5;outline-offset:3px}
+.send{margin-top:30px;display:flex;flex-wrap:wrap;gap:18px;align-items:center}.send p{margin:0;color:#b8cce0;font-size:15px}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;border-top:2px solid var(--ink)}
+.svc article{padding:30px 24px 34px;transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease}.svc article+article{border-left:1px solid var(--line)}
+.svc .n{font:800 15px var(--serif);color:var(--red)}
+.svc h3{margin:10px 0 16px}
+.svc dl{margin:0;font-size:15.5px}.svc dt{font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:14px}.svc dd{margin:2px 0 0}
+/* projects */
+.alt{background:var(--paper2)}
+.proj{margin-top:48px;border-top:2px solid var(--ink)}
+#projetos{padding-bottom:40px}
+.row{display:grid;grid-template-columns:70px 1.1fr 1.4fr;gap:28px;padding:34px 0;border-bottom:1px solid var(--line)}
+.row .n{font:800 34px var(--serif);color:var(--red);line-height:1}
+.row p{margin:10px 0 0;font-size:16px}.row b{font-weight:700}
+.row .tag{font-size:13px;color:var(--muted);margin-top:8px}
+.row a.go{display:inline-block;margin-top:14px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px}
+.row a.go:hover{color:var(--red)}
+/* process */
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:34px 28px;margin-top:48px;padding:0;list-style:none}
+.steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:16px}
+.steps li::before{content:counter(s,decimal-leading-zero);font:800 15px var(--serif);color:var(--red)}
+.steps h3{font-size:20px;margin:6px 0 8px}.steps p{margin:0;font-size:15.5px;color:var(--muted)}
+/* about */
+.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:56px;align-items:center}
+.about img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:var(--r);filter:grayscale(.15)}
+.about p{margin:18px 0 0}
+.diff{display:grid;grid-template-columns:1fr 1fr;gap:18px 28px;margin:32px 0 0;padding:0;list-style:none}
+.diff li{padding-left:16px;border-left:3px solid var(--red);font-size:15.5px}.diff b{display:block}
+/* faq */
+details{border-bottom:1px solid var(--line);padding:20px 0;transition:transform .25s ease,background-color .25s ease,box-shadow .25s ease}details:first-of-type{border-top:2px solid var(--ink);margin-top:44px}
+summary{cursor:pointer;font:600 20px var(--serif);list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";color:var(--red);font-size:26px;line-height:1}
+details[open] summary::after{content:"–"}details p{margin:12px 0 0;max-width:680px;color:var(--muted)}
+/* final */
+.final{background:linear-gradient(160deg,#075a9c,#034777);color:var(--paper);text-align:left}
+.final h2{max-width:780px}.final .eyebrow{color:#cfeaff}.final p{max-width:560px;color:#d6ecfb;margin:20px 0 0}
+.final .btn.line{color:var(--paper);box-shadow:inset 0 0 0 2px var(--paper)}.final .btn.line:hover{background:var(--paper);color:var(--green)}
+footer{background:#07162f;color:#adc1d5;padding:36px 0 calc(36px + env(safe-area-inset-bottom));font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}footer a{color:var(--paper)}
+.hero em{color:#168bd2}
+.dark .btn{background:#168bd2;color:#09192e}.dark .btn:hover{background:#87caf5}
+.final .btn:not(.line){background:#fff;color:#075a9c}.final .btn:not(.line):hover{background:#cfeaff}
+/* mobile bar */
+.bar{display:none}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.rv.on{opacity:1;transform:none}
+@media(max-width:860px){
+ section{padding:64px 0}.hero{padding:112px 0 56px}.hero-layout{grid-template-columns:1fr;gap:38px}.hero-copy h1{font-size:clamp(38px,8vw,58px)}.chat-demo{justify-self:center}nav .lk{display:none}
+ .checks,.svc,.steps,.about,.diff{grid-template-columns:1fr}
+ .svc article,.svc article+article{padding:26px 16px;border-left:0;border-bottom:1px solid var(--line)}
+ .row{grid-template-columns:44px 1fr;gap:6px 16px}.row>div:last-child{grid-column:2}.row .n{font-size:26px}
+ .about img{max-width:280px}
+ .bar{display:block;position:fixed;inset:auto 0 0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(244,249,253,.96);border-top:1px solid var(--line)}
+ .bar .btn{width:100%;justify-content:center}body{padding-bottom:78px}
+}
+@media(max-width:420px){
+ header .wrap{padding-inline:16px}
+ .logo{gap:5px;font-size:clamp(15px,4.7vw,18px)}
+ nav{gap:0}
+ nav .btn.sm{gap:7px;padding:8px 10px;font-size:13px}
+ nav .btn.sm svg{width:18px;height:18px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.bub,.chat .gap,.rv{opacity:1;transform:none}}
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:45;display:grid;place-items:center;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;box-shadow:0 5px 18px rgba(9,25,46,.24);transition:transform .2s,box-shadow .2s}
+.wa-float::before{content:"";position:absolute;inset:0;z-index:0;border-radius:inherit;pointer-events:none;animation:wa-green-glow 3.6s ease-in-out infinite}
+@keyframes wa-green-glow{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}50%{box-shadow:0 0 20px 8px rgba(37,211,102,.65)}}
+.wa-float svg{position:relative;z-index:1;width:32px;height:32px;fill:currentColor}
+@media(max-width:860px){.wa-float{right:16px;bottom:calc(92px + env(safe-area-inset-bottom))}}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ .svc article.rv:hover,.steps li.rv:hover,#faq details:hover{transform:translateY(-5px);background-color:var(--paper2);box-shadow:inset 0 3px 0 #168bd2}
+ .wa-float:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(9,25,46,.3)}
+}
 </style>
 </head>
 <body>
-<div id="top" style="font-family: 'Manrope', system-ui, sans-serif; color: #09192e; background: #ffffff; overflow-x: hidden;">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.85 9.85 0 001.599 5.283l-1 3.652 3.891-1.634zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></symbol></svg>
+<a class="skip" href="#main">Pular para o conteúdo</a>
 
-  <!-- HEADER -->
-  <header style="position: fixed; top: 0; left: 0; width: 100%; z-index: 50; background: rgba(255,255,255,.86); backdrop-filter: blur(10px); border-bottom: 1px solid #dce8f1;">
-    <div style="max-width: 1180px; margin: 0 auto; padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
-      <a href="#top" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: -.02em; color: #09192e;">Tiago Bresolin</a>
-      <nav style="display: flex; align-items: center; gap: 26px;">
-        <a href="#servicos" class="nav-services" style="font-weight: 600; font-size: 15px; color: #344963;">Serviços</a>
-        <a href="https://wa.me/5551993416111?text=Oi!%20Vi%20o%20seu%20portf%C3%B3lio%20e%20queria%20saber%20mais." target="_blank" rel="noopener" class="hv-primary pulsing-glow" style="display: inline-flex; align-items: center; gap: 9px; background: #075a9c; color: #fff; font-weight: 700; font-size: 15px; padding: 11px 20px; border-radius: 999px; box-shadow: 0 6px 18px -8px rgba(7,90,156,.7); transition: background .2s, transform .2s;">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.85 9.85 0 001.599 5.283l-1 3.652 3.891-1.634zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>
-          <span class="nav-cta-label">Chamar no WhatsApp</span><span class="nav-cta-label-mobile">WhatsApp</span>
-        </a>
-      </nav>
+<header>
+ <div class="wrap">
+  <a class="logo" href="#topo" aria-label="Tiago Bresolin, início"><img class="logo-mark" src="carimbo_tiago_foto-256.png" alt="" width="68" height="68" aria-hidden="true">Tiago Bresolin<i></i></a>
+  <nav aria-label="Principal">
+   <a class="lk" href="#servicos">Serviços</a><a class="lk" href="#projetos">Projetos</a><a class="lk" href="#faq">Dúvidas</a>
+   <a class="btn sm pulse-blue" href="#" data-wa target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+  </nav>
+ </div>
+</header>
+
+<main id="main">
+<section class="hero" id="topo">
+ <div class="wrap hero-layout">
+  <div class="hero-copy">
+  <p class="eyebrow">Sites, WhatsApp e sistemas para negócios locais</p>
+  <h1><span>O cliente te chamou</span><span>+ vc demorou pra responder</span><span>= <em>Cliente perdido...</em></span></h1>
+  <p class="lead">Eu crio o site que passa confiança, o atendimento que responde na hora e o sistema que organiza o resto. Tudo direto comigo, sem agência no meio e sem conversa de programador.</p>
+  <div class="cta-row">
+   <a class="btn" href="#" data-wa target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Falar comigo no WhatsApp</a>
+   <a class="btn line projects-link" href="#projetos">Ver o que já fiz</a>
+  </div>
+  </div>
+  <div class="chat-demo">
+   <div class="phone" aria-hidden="true">
+    <div class="phone-screen">
+     <div class="phone-notch"></div>
+     <div class="phone-status"><span>9:41</span><span>● ● ●</span></div>
+     <div class="phone-contact">
+      <span class="contact-avatar">A</span>
+      <span><span class="contact-name">Atendimento</span><span class="contact-status">online</span></span>
+     </div>
+     <div class="phone-chat">
+      <div class="bub c"><span data-type>Oi, vocês atendem hoje? Queria agendar.</span><small>Sábado, 21:47</small></div>
+      <div class="chat-gap after-typing">…sem resposta até segunda de manhã. O cliente já fechou com outro.</div>
+      <div class="bub m"><span data-type>Oi! Atendemos sim. Qual horário fica bom pra você?</span></div>
+      <div class="chat-gap after-typing">Com atendimento automático: na hora</div>
+     </div>
     </div>
-  </header>
+   </div>
+   <p class="phone-caption">Uma resposta na hora pode mudar tudo.</p>
+   <p class="sr-only">Exemplo de conversa: Oi, vocês atendem hoje? Queria agendar. Sábado, 21:47. …sem resposta até segunda de manhã. O cliente já fechou com outro. Oi! Atendemos sim. Qual horário fica bom pra você? Com atendimento automático: na hora.</p>
+  </div>
+ </div>
+</section>
 
-  <main style="padding-top: 70px;">
+<section class="dark" id="problemas">
+ <div class="wrap">
+  <p class="eyebrow">Faça seu diagnóstico</p>
+  <h2>Quanto disso acontece no seu negócio?</h2>
+  <p class="sub">Marque o que for verdade e envie para mim. A conversa já começa pelo que realmente trava a sua venda.</p>
+  <fieldset style="border:0;padding:0;margin:0">
+   <legend style="position:absolute;left:-999px">Situações que acontecem no seu negócio</legend>
+   <div class="checks">
+    <label class="chk"><input type="checkbox" value="Meu site é antigo, lento ou nem existe"><span>Meu site é antigo, lento ou nem existe.</span></label>
+    <label class="chk"><input type="checkbox" value="Cliente chama no WhatsApp e demoro horas para responder"><span>O cliente chama no WhatsApp e eu demoro horas para responder.</span></label>
+    <label class="chk"><input type="checkbox" value="Agenda, pedidos e clientes ficam no caderno ou em planilhas"><span>Agenda, pedidos e clientes vivem no caderno, em grupos ou em planilhas.</span></label>
+    <label class="chk"><input type="checkbox" value="Não sei se meu site traz algum cliente"><span>Não sei se o meu site traz algum cliente.</span></label>
+    <label class="chk"><input type="checkbox" value="Quando pesquisam meu negócio no Google, não passo confiança"><span>Quando pesquisam meu negócio no Google, a primeira impressão não ajuda.</span></label>
+    <label class="chk"><input type="checkbox" value="Faço manualmente tarefas que poderiam ser automáticas"><span>Repito todo dia tarefas que um sistema poderia fazer por mim.</span></label>
+   </div>
+  </fieldset>
+  <div class="send">
+   <button class="btn" id="diag" type="button"><svg aria-hidden="true"><use href="#wa"/></svg>Enviar meu diagnóstico</button>
+   <p>Abre o WhatsApp com a mensagem pronta. Você pode editar antes de enviar.</p>
+  </div>
+ </div>
+</section>
 
-  <!-- HERO -->
-  <section style="position: relative; background: linear-gradient(180deg,#ffffff 0%,#f4f9fd 100%);">
-    <div class="hero-grid" style="max-width: 1180px; margin: 0 auto; padding: 76px 28px 92px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 60px; align-items: center;">
-      <!-- left -->
-      <div>
-        <div style="display: inline-flex; align-items: center; gap: 8px; background: #eaf5ff; color: #075a9c; font-weight: 700; font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; padding: 8px 14px; border-radius: 999px;">
-          <span style="width: 7px; height: 7px; border-radius: 50%; background: #168bd2; box-shadow: 0 0 0 3px rgba(22,139,210,.2);"></span>
-          Presença digital que gera autoridade
-        </div>
-        <h1 class="h1-hero" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 56px; line-height: 1.03; letter-spacing: -.03em; margin: 22px 0 0; color: #09192e;">
-          Seu negócio cresce quando o digital<span style="color: #168bd2;"> trabalha por você.</span>
-        </h1>
-        <p style="font-size: 18.5px; line-height: 1.6; color: #40536a; max-width: 520px; margin: 24px 0 0;">
-          Crio sites, sistemas e agentes de IA para empresas que querem atrair mais clientes e construir autoridade online, sem precisar entender nada de tecnologia.
-        </p>
-        <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px;">
-          <a href="https://wa.me/5551993416111?text=Oi!%20Vi%20o%20seu%20portf%C3%B3lio%20e%20queria%20saber%20mais." target="_blank" rel="noopener" class="hv-primary pulsing-glow" style="display: inline-flex; align-items: center; gap: 10px; background: #075a9c; color: #fff; font-weight: 700; font-size: 16px; padding: 16px 26px; border-radius: 12px; box-shadow: 0 14px 30px -12px rgba(7,90,156,.8); transition: background .2s, transform .2s;">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="#fff"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.85 9.85 0 001.599 5.283l-1 3.652 3.891-1.634zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>
-            Falar comigo agora
-          </a>
-          <a href="#servicos" class="hv-ghost" style="display: inline-flex; align-items: center; gap: 8px; background: #075a9c; color: #fff; font-weight: 700; font-size: 16px; padding: 16px 24px; border-radius: 12px; border: 1.5px solid #075a9c; transition: background .2s, border-color .2s, color .2s;">Ver serviços</a>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 22px 30px; margin-top: 38px;">
-          <div style="display: flex; align-items: center; gap: 9px; font-weight: 600; font-size: 14.5px; color: #344963;"><span style="color:#075a9c;">✓</span> Entrega em dias, não meses</div>
-          <div style="display: flex; align-items: center; gap: 9px; font-weight: 600; font-size: 14.5px; color: #344963;"><span style="color:#075a9c;">✓</span> Você fala direto comigo</div>
-          <div style="display: flex; align-items: center; gap: 9px; font-weight: 600; font-size: 14.5px; color: #344963;"><span style="color:#075a9c;">✓</span> Feito pro seu negócio</div>
-        </div>
-      </div>
+<section id="servicos">
+ <div class="wrap">
+  <p class="eyebrow">O que eu resolvo</p>
+  <h2>Três problemas, três soluções.</h2>
+  <div class="svc">
+   <article class="rv"><span class="n">01</span><h3>Site que vira o seu melhor vendedor</h3>
+    <dl><dt>Resolve</dt><dd>Site antigo, lento ou inexistente; negócio que não passa confiança no Google.</dd>
+    <dt>Indicado para</dt><dd>Quem atende o público e precisa ser encontrado e levado direto ao WhatsApp.</dd>
+    <dt>Você ganha</dt><dd>Um endereço profissional, rápido no celular, com um caminho claro até o contato.</dd></dl></article>
+   <article class="rv"><span class="n">02</span><h3>Atendimento que não dorme</h3>
+    <dl><dt>Resolve</dt><dd>Mensagens sem resposta fora do horário e venda que esfria na espera.</dd>
+    <dt>Indicado para</dt><dd>Negócios com muitas perguntas repetidas: horários, valores, agendamentos.</dd>
+    <dt>Você ganha</dt><dd>Um agente no WhatsApp que responde na hora, tira dúvidas e organiza agendamentos.</dd></dl></article>
+   <article class="rv"><span class="n">03</span><h3>Sistema do tamanho do seu negócio</h3>
+    <dl><dt>Resolve</dt><dd>Agenda, cadastro e pedidos espalhados em caderno, grupos e planilhas.</dd>
+    <dt>Indicado para</dt><dd>Quem perde tempo ou informação por falta de um controle simples.</dd>
+    <dt>Você ganha</dt><dd>Tudo em um lugar só, feito do seu jeito, sem pagar por recursos que não usa.</dd></dl></article>
+  </div>
+ </div>
+</section>
 
-      <!-- right: simulacao de conversa no whatsapp -->
-      <div style="position: relative; display: flex; justify-content: center;">
-        <div style="position: absolute; inset: -8% -4% -4% -4%; background: radial-gradient(60% 55% at 70% 30%, rgba(22,139,210,.22), transparent 70%); filter: blur(6px); animation: softglow 5s ease-in-out infinite;"></div>
-        <div style="position: relative; width: min(340px, 86vw); background: #07162f; border-radius: 40px; padding: 12px; box-shadow: 0 40px 80px -30px rgba(7,90,156,.55), 0 0 0 1px rgba(0,0,0,.05); animation: floatY 6s ease-in-out infinite;">
-          <div style="border-radius: 30px; overflow: hidden; background: #f3f8fd;">
-            <div style="display: flex; align-items: center; gap: 11px; background: #075a9c; padding: 15px 16px 13px;">
-              <div style="width: 40px; height: 40px; border-radius: 50%; background: #075a9c; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-family: 'Bricolage Grotesque',sans-serif;">S</div>
-              <div style="flex: 1; min-width: 0;">
-                <div style="color: #fff; font-weight: 700; font-size: 15px;">Seu Atendimento</div>
-                <div style="color: #b3def7; font-size: 12px; display: flex; align-items: center; gap: 6px;">online agora</div>
-              </div>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#d9efff"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.4 11.4 0 003.57.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.57 3.57 1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
-            </div>
-            <div style="background: #f3f8fd; padding: 18px 14px 14px; display: flex; flex-direction: column; gap: 9px; min-height: 320px;">
-              <div style="align-self: center; background: #d9efff; color: #385876; font-size: 11px; font-weight: 600; padding: 5px 12px; border-radius: 8px; animation: bubbleIn .5s ease both;">HOJE</div>
-              <div class="chat-message chat-message--incoming" style="animation-delay: .3s;">
-                Oi! Vocês ainda estão atendendo hoje?
-                <span class="chat-time chat-time--incoming">09:41</span>
-              </div>
-              <div class="chat-message chat-message--outgoing" style="animation-delay: 1s;">
-                Oi! 😊 Estamos sim. Quer que eu já reserve um horário pra você?
-                <span class="chat-time chat-time--outgoing">09:41 ✓✓</span>
-              </div>
-              <div class="chat-message chat-message--incoming" style="animation-delay: 1.7s;">
-                Pode ser 15h?
-                <span class="chat-time chat-time--incoming">09:42</span>
-              </div>
-              <div class="chat-message chat-message--outgoing" style="animation-delay: 2.4s;">
-                Fechado! Agendei às 15h e te mando um lembrete mais tarde 👍
-                <span class="chat-time chat-time--outgoing">09:42 ✓✓</span>
-              </div>
-              <div style="align-self: center; margin-top: 4px; background: #075a9c; color: #fff; font-size: 11px; font-weight: 700; padding: 6px 13px; border-radius: 999px; animation: bubbleIn .5s ease both; animation-delay: 3s;">respondido em 4 segundos, sem você fazer nada</div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px; background: #f3f8fd; padding: 10px 12px 12px;">
-              <div style="flex: 1; background: #fff; border-radius: 999px; padding: 10px 14px; color: #72869a; font-size: 13px;">Mensagem</div>
-              <div style="width: 40px; height: 40px; border-radius: 50%; background: #075a9c; display: flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="alt" id="projetos">
+ <div class="wrap">
+  <p class="eyebrow">Projetos que eu fiz</p>
+  <h2>Negócios reais, problemas reais.</h2>
+  <div class="proj">
+   <div class="row rv"><div class="n">01</div>
+    <div><h3>Vinho do Gringo</h3><p class="tag">Meu próprio negócio · Parobé/RS</p></div>
+    <div><p><b>Necessidade:</b> apresentar a consultoria gratuita de vinhos e transformar visita em conversa no WhatsApp.</p>
+    <p><b>Solução:</b> site com a proposta explicada em poucos passos, entrega para todo o Brasil e perguntas frequentes, otimizado para busca no Google.</p>
+    <a class="go" href="https://tiagoblink182.github.io/Vinho-do-Gringo/" target="_blank" rel="noopener">Ver o site →</a></div></div>
+   <div class="row rv"><div class="n">02</div>
+    <div><h3>Fudoshin Dojo Karate</h3><p class="tag">Academia de karatê Shotokan · Parobé/RS</p></div>
+    <div><p><b>Necessidade:</b> mostrar o que se treina no dojo e levar o interessado para o Whatsapp e marcar uma aula experimental.</p>
+    <p><b>Solução:</b> página única com a filosofia do dojo, o que se aprende e chamada direta para o WhatsApp com agente de atendimento automático.</p>
+    <a class="go" href="https://tiagoblink182.github.io/fudoshindojoclaude/" target="_blank" rel="noopener">Ver o site →</a></div></div>
+   <div class="row rv"><div class="n">03</div>
+    <div><h3>Agroveterinária</h3><p class="tag">Comércio local · Parobé/RS</p></div>
+    <div><p><b>Necessidade:</b> dar ao comércio uma presença online simples e profissional.</p>
+    <p><b>Solução:</b> landing page criada para uma agroveterinária da cidade.</p>
+    <a class="go" href="https://agroducleiton.agroducleitoncombr.workers.dev/" target="_blank" rel="noopener">Ver o site →</a></div></div>
+  </div>
+ </div>
+</section>
 
-  <!-- ANTES x DEPOIS -->
-  <section style="background: #09192e; color: #fff;">
-    <div class="sec-pad" style="max-width: 1180px; margin: 0 auto; padding: 88px 28px;">
-      <div style="text-align: center; max-width: 640px; margin: 0 auto;">
-        <span style="font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: #87caf5;">O problema</span>
-        <h2 class="h2-big" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.08; letter-spacing: -.02em; margin: 14px 0 0;">Você reconhece alguma dessas situações?</h2>
-        <p style="font-size: 17px; line-height: 1.6; color: #b8cce0; margin: 18px 0 0;">Quase todo negócio perde cliente pelo mesmo motivo: a parte técnica trava. É exatamente aí que eu entro.</p>
-      </div>
-      <div class="ad-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 52px;">
-        <div class="hv-card" style="background: #0e2545; border: 1px solid #1b385b; border-radius: 20px; padding: 32px;">
-          <div style="display: inline-flex; align-items: center; gap: 8px; color: #87caf5; font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 22px;">Hoje, sem estrutura</div>
-          <div style="display: flex; flex-direction: column; gap: 18px;">
-            <div style="display: flex; gap: 13px;"><span style="flex: none; width: 24px; height: 24px; border-radius: 50%; background: rgba(83,179,242,.15); color: #87caf5; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">✕</span><p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #d8e6f2;">Não tem clareza se seu site gera demanda de clientes pro negócio.</p></div>
-            <div style="display: flex; gap: 13px;"><span style="flex: none; width: 24px; height: 24px; border-radius: 50%; background: rgba(83,179,242,.15); color: #87caf5; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">✕</span><p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #d8e6f2;">Mensagem no WhatsApp fica horas sem resposta e a venda esfria.</p></div>
-            <div style="display: flex; gap: 13px;"><span style="flex: none; width: 24px; height: 24px; border-radius: 50%; background: rgba(83,179,242,.15); color: #87caf5; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">✕</span><p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #d8e6f2;">Agenda, cadastro e pedido tudo no caderno ou espalhado em vários grupos e planilhas.</p></div>
-          </div>
-        </div>
-        <div class="hv-card" style="background: linear-gradient(160deg,#168bd2,#075a9c); border: 1px solid #2f9be0; border-radius: 20px; padding: 32px; box-shadow: 0 30px 60px -30px rgba(22,139,210,.9);">
-          <div style="display: inline-flex; align-items: center; gap: 8px; color: #cfeaff; font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 22px;">Depois, comigo</div>
-          <div style="display: flex; flex-direction: column; gap: 18px;">
-            <div style="display: flex; gap: 13px;"><span style="flex: none; width: 24px; height: 24px; border-radius: 50%; background: rgba(255,255,255,.18); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">✓</span><p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #e6f4ff;">Uma página que gera demanda e vendas pro negócio.</p></div>
-            <div style="display: flex; gap: 13px;"><span style="flex: none; width: 24px; height: 24px; border-radius: 50%; background: rgba(255,255,255,.18); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">✓</span><p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #e6f4ff;">Um agente que responde na hora, dia e noite, e não deixa venda escapar.</p></div>
-            <div style="display: flex; gap: 13px;"><span style="flex: none; width: 24px; height: 24px; border-radius: 50%; background: rgba(255,255,255,.18); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">✓</span><p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #e6f4ff;">Um sistema simples pra organizar agenda, clientes e pedidos num lugar só.</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="processo">
+ <div class="wrap">
+  <p class="eyebrow">Como trabalho</p>
+  <h2>Sem surpresa, do primeiro papo à entrega.</h2>
+  <ol class="steps">
+   <li class="rv"><h3>Escuto</h3><p>Conversamos sobre o seu negócio e onde está o gargalo. Sem termo técnico.</p></li>
+   <li class="rv"><h3>Planejo</h3><p>Defino o que faz sentido agora e o que pode esperar, com escopo e valor combinados antes de começar.</p></li>
+   <li class="rv"><h3>Desenho</h3><p>Organizo a mensagem e o caminho do cliente até o contato.</p></li>
+   <li class="rv"><h3>Construo</h3><p>Desenvolvo e mostro o andamento para você opinar no caminho.</p></li>
+   <li class="rv"><h3>Testo</h3><p>Confiro no celular, nos links e no WhatsApp. Ajusto o que precisar.</p></li>
+   <li class="rv"><h3>Entrego e acompanho</h3><p>Coloco no ar e fico por perto depois. Você não fica sozinho.</p></li>
+  </ol>
+ </div>
+</section>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos" style="background: #f4f9fd;">
-    <div class="sec-pad" style="max-width: 1180px; margin: 0 auto; padding: 62px 28px;">
-      <span style="font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: #075a9c;">O que eu faço por você</span>
-      <h2 class="h2-big" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.08; letter-spacing: -.02em; margin: 14px 0 0; max-width: 560px; color: #09192e;">Três formas de trazer mais resultado pro seu negócio</h2>
-      <div class="svc-grid" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-top: 48px;">
-        <div class="hv-card" style="background: #fff; border: 1px solid #dce8f1; border-radius: 20px; padding: 30px;">
-          <div class="card-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#168bd2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg>
-          </div>
-          <h3 class="card-title">Site ou página que vende</h3>
-          <p class="card-description">Um endereço profissional que aparece no Google e leva quem te acha direto pro seu WhatsApp, pronto pra fechar.</p>
-        </div>
-        <div class="hv-card" style="background: #fff; border: 1px solid #dce8f1; border-radius: 20px; padding: 30px;">
-          <div class="card-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#168bd2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-9 8.5 8.5 8.5 0 01-3.9-.9L3 21l1.9-4.1A8.38 8.38 0 013.5 11 8.5 8.5 0 0112 3a8.5 8.5 0 019 8.5z"/></svg>
-          </div>
-          <h3 class="card-title">Agente no WhatsApp</h3>
-          <p class="card-description">Responde seu cliente na hora, dia e noite, tira dúvidas e agenda por você. Nenhuma venda perdida por demora.</p>
-        </div>
-        <div class="hv-card" style="background: #fff; border: 1px solid #dce8f1; border-radius: 20px; padding: 30px;">
-          <div class="card-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#168bd2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          </div>
-          <h3 class="card-title">Sistema sob medida</h3>
-          <p class="card-description">Agenda, cadastro e controle do seu jeito, num só lugar. Chega de anotar tudo no caderno e perder informação.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="alt" id="sobre">
+ <div class="wrap about">
+  <img src="minhafoto.jpg" alt="Tiago Bresolin" width="400" height="400" loading="lazy" decoding="async">
+  <div>
+   <p class="eyebrow">Quem está do outro lado</p>
+   <h2>Você testa antes de contratar.</h2>
+   <p>Sou o Tiago, de Parobé. Há mais de 5 anos estudo programação e trabalho com consultoria de vendas de vinhos: ouvir o cliente, entender o que ele procura e indicar a opção certa. É isso que levo para cada cliente, seja para construir um  site, sistema automatizado ou mesmo para oferecer um bom vinho.</p>
+   <p>Eu não começo pela tecnologia. Começo pela pergunta: <em>o que faz o seu cliente dizer sim?</em> O código vem depois, e a parte técnica fica comigo.</p>
+   <ul class="diff">
+    <li><b>Você fala direto comigo</b>Sem intermediário e sem repasse de recado.</li>
+    <li><b>Pensado para vender</b>Cada página leva o visitante a um próximo passo.</li>
+    <li><b>Linguagem simples</b>Você entende o que está contratando.</li>
+    <li><b>Presença depois da entrega</b>Ajustes e dúvidas têm para quem perguntar.</li>
+   </ul>
+  </div>
+ </div>
+</section>
 
-  <!-- COMO FUNCIONA -->
-  <section style="background: #fff;">
-    <div class="sec-pad" style="max-width: 1180px; margin: 0 auto; padding: 62px 28px;">
-      <span style="font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: #075a9c;">Como funciona</span>
-      <h2 class="h2-big" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.08; letter-spacing: -.02em; margin: 14px 0 0; max-width: 560px; color: #09192e;">Simples, do primeiro contato até a entrega</h2>
-      <div class="steps-grid" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; position: relative;">
-        <div class="hv-card">
-          <div class="step-number">1</div>
-          <h3 class="step-title">Você me chama no WhatsApp</h3>
-          <p class="card-description">A gente conversa sobre o seu negócio e onde dá pra ganhar mais cliente. Sem termo técnico.</p>
-        </div>
-        <div class="hv-card">
-          <div class="step-number">2</div>
-          <h3 class="step-title">Eu monto a proposta</h3>
-          <p class="card-description">Mostro o que faz sentido pro seu momento e combino um valor especial pro primeiro trabalho.</p>
-        </div>
-        <div class="hv-card">
-          <div class="step-number">3</div>
-          <h3 class="step-title">Entrego e acompanho</h3>
-          <p class="card-description">Coloco no ar e fico por perto pra ajustar o que precisar. Você não fica sozinho depois.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="faq">
+ <div class="wrap">
+  <p class="eyebrow">Dúvidas comuns</p>
+  <h2>Antes de chamar, talvez você queira saber.</h2>
+  <details name="faq"><summary>Como começa um projeto?</summary><p>Você me chama no WhatsApp e conta sobre o seu negócio. Depois da conversa, envio uma proposta com o que será feito e o valor. Só começo quando você aprovar.</p></details>
+  <details name="faq"><summary>Quanto custa?</summary><p>Depende do que o seu negócio precisa. Um site simples e um sistema sob medida são trabalhos muito diferentes. Por isso o valor vem em uma proposta, depois da conversa e sem compromisso.</p></details>
+  <details name="faq"><summary>Você faz soluções personalizadas?</summary><p>Sim. Cada projeto é montado a partir da necessidade do negócio, e não de um modelo pronto para todo mundo.</p></details>
+  <details name="faq"><summary>Dá para melhorar o site que eu já tenho?</summary><p>Em muitos casos, sim. Primeiro eu olho o que existe e digo com sinceridade se vale ajustar ou refazer.</p></details>
+  <details name="faq"><summary>E depois que o site estiver no ar?</summary><p>Fico por perto para ajustes e dúvidas. Se você quiser acompanhamento contínuo, combinamos na proposta.</p></details>
+  <details name="faq"><summary>Preciso entender de tecnologia?</summary><p>Não. Eu explico tudo em português claro e cuido da parte técnica.</p></details>
+ </div>
+</section>
 
-  <!-- PORTFÓLIO -->
-  <section style="background: #fff;">
-    <div class="sec-pad" style="max-width: 1180px; margin: 0 auto; padding: 62px 28px;">
-      <span style="font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: #075a9c;">Portfólio</span>
-      <h2 class="h2-big" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.08; letter-spacing: -.02em; margin: 14px 0 0; max-width: 560px; color: #09192e;">Alguns projetos que eu fiz</h2>
-      <div class="svc-grid" style="display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-top: 48px;">
-        <a href="https://tiagoblink182.github.io/Vinho-do-Gringo/" target="_blank" rel="noopener" class="hv-card project-card">
-          <div>
-            <div class="card-icon">
-              <img src="projetos.jpg" alt="" width="38" height="38" class="project-image">
-            </div>
-            <h3 class="card-title">Vinho do Gringo</h3>
-            <p class="card-description">Site que desenvolvi para meu negócio de vendas da vinhos com consultoria</p>
-          </div>
-          <div class="project-link">
-            Ver projeto <span class="project-arrow">→</span>
-          </div>
-        </a>
-        <a href="https://tiagoblink182.github.io/fudoshindojoclaude/" target="_blank" rel="noopener" class="hv-card project-card">
-          <div>
-            <div class="card-icon">
-              <img src="projetos.jpg" alt="" width="38" height="38" class="project-image">
-            </div>
-            <h3 class="card-title">Fudoshin Dojo Karate</h3>
-            <p class="card-description">Site da academia de Karate em Parobé</p>
-          </div>
-          <div class="project-link">
-            Ver projeto <span class="project-arrow">→</span>
-          </div>
-        </a>
-        <a href="https://agroducleiton.agroducleitoncombr.workers.dev/" target="_blank" rel="noopener" class="hv-card project-card">
-          <div>
-            <div class="card-icon">
-              <img src="projetos.jpg" alt="" width="38" height="38" class="project-image">
-            </div>
-            <h3 class="card-title">Agroveterinária</h3>
-            <p class="card-description">Landing Page que eu fiz para uma agroveterinária na minha cidade</p>
-          </div>
-          <div class="project-link">
-            Ver projeto <span class="project-arrow">→</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+<section class="final" id="contato">
+ <div class="wrap">
+  <p class="eyebrow">Próximo passo</p>
+  <h2>Quantos clientes passaram pelo seu negócio esta semana e não voltaram?</h2>
+  <p>Uma conversa de poucos minutos já mostra onde está o vazamento e o que dá para consertar primeiro. Sem compromisso.</p>
+  <div class="cta-row">
+   <a class="btn pulse-white" href="#" data-wa target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+   <a class="btn line" href="mailto:tiagoblink182@gmail.com">tiagoblink182@gmail.com</a>
+  </div>
+ </div>
+</section>
+</main>
 
-  <!-- QUEM SOU -->
-  <section style="background: #f4f9fd;">
-    <div class="about-grid sec-pad" style="max-width: 1180px; margin: 0 auto; padding: 62px 28px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: start;">
-      <div>
-        <span style="font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: #075a9c;">Quem sou</span>
-        <img src="minhafoto.jpg" alt="Tiago Bresolin" width="400" height="400" loading="lazy" decoding="async" style="margin-top: 24px; width: 100%; aspect-ratio: 1/1; border-radius: 20px; object-fit: cover; display: block;">
-      </div>
-      <div>
-        <h2 class="h2-big" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 34px; line-height: 1.12; letter-spacing: -.02em; margin: 0; color: #09192e;">Sou o Tiago Bresolin, de Parobé.</h2>
-        <p style="font-size: 17.5px; line-height: 1.65; color: #40536a; margin: 22px 0 0;">Comecei a trabalhar com tecnologia por um motivo simples: ajudar dono de negócio a vender mais e perder menos tempo com tarefa manual. Não gosto de complicar.</p>
-        <p style="font-size: 17.5px; line-height: 1.65; color: #40536a; margin: 18px 0 0;">Meu trabalho é resolver um problema concreto do seu negócio e deixar a parte técnica comigo. Se você topar, o primeiro passo é uma conversa rápida no WhatsApp, sem compromisso.</p>
-        <a href="https://wa.me/5551993416111?text=Oi!%20Vi%20o%20seu%20portf%C3%B3lio%20e%20queria%20saber%20mais." target="_blank" rel="noopener" class="hv-primary pulsing-glow" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; background: #075a9c; color: #fff; font-weight: 700; font-size: 16px; padding: 14px 24px; border-radius: 12px; transition: background .2s, transform .2s;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.85 9.85 0 001.599 5.283l-1 3.652 3.891-1.634zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>
-          Conversar comigo
-        </a>
-      </div>
-    </div>
-  </section>
+<footer>
+ <div class="wrap">
+  <a href="https://github.com/tiagoblink182" target="_blank" rel="noopener">© <span id="yr">2026</span> Tiago Bresolin · Parobé/RS · Atendo todo o Brasil</a>
+ </div>
+</footer>
 
-  <!-- CTA FINAL -->
-  <section style="background: linear-gradient(160deg,#168bd2,#075a9c); color: #fff;">
-    <div style="max-width: 760px; margin: 0 auto; padding: 92px 28px; text-align: center;">
-      <h2 class="cta-big" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 42px; line-height: 1.08; letter-spacing: -.02em; margin: 0;">Vamos conversar sobre como usar tecnologia pra vender mais sem mais esforço?</h2>
-      <p style="font-size: 18px; line-height: 1.6; color: #c7e6fb; margin: 20px 0 0;">Me chama no WhatsApp. A conversa é rápida, sem compromisso, e você já sai com um caminho claro do que dá pra melhorar.</p>
-      <a href="https://wa.me/5551993416111?text=Oi!%20Vi%20o%20seu%20portf%C3%B3lio%20e%20queria%20saber%20mais." target="_blank" rel="noopener" class="hv-primary pulsing-glow" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 32px; background: #075a9c; color: #fff; font-weight: 700; font-size: 17px; padding: 17px 30px; border-radius: 12px; box-shadow: 0 18px 40px -18px rgba(0,0,0,.5); transition: background .2s, transform .2s;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.85 9.85 0 001.599 5.283l-1 3.652 3.891-1.634zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>
-        Falar comigo no WhatsApp
-      </a>
-    </div>
-  </section>
+<div class="bar"><a class="btn" href="#" data-wa target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Falar no WhatsApp</a></div>
+<a class="wa-float" href="#" data-wa target="_blank" rel="noopener" aria-label="Falar com Tiago pelo WhatsApp" title="Falar pelo WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg></a>
 
-  </main>
+<script>
+(function () {
+  var whatsappNumber = '5551993416111';
+  var defaultMessage = 'Oi, Tiago! Vi seu portfólio e queria saber mais.';
+  var phone = document.querySelector('.phone');
+  var typingNodes = [].slice.call(document.querySelectorAll('.phone [data-type]'));
+  var instantNodes = [].slice.call(document.querySelectorAll('.phone .after-typing'));
+  var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  <!-- FOOTER -->
-  <footer style="background: #07162f; color: #d8e6f2;">
-    <div style="max-width: 1180px; margin: 0 auto; padding: 52px 28px; display: flex; flex-wrap: wrap; gap: 28px; justify-content: space-between; align-items: flex-start;">
-      <div style="max-width: 340px;">
-        <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 20px; color: #fff;">Tiago Bresolin</div>
-        <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.6; color: #adc1d5;">Sites, agentes de WhatsApp e sistemas sob medida para negócios de empresas.</p>
-      </div>
-      <div style="display: flex; gap: 40px;">
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <span style="font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #9ab0c6;">Contato</span>
-          <a href="https://wa.me/5551993416111?text=Oi!%20Vi%20o%20seu%20portf%C3%B3lio%20e%20queria%20saber%20mais." target="_blank" rel="noopener" class="hv-white" style="color: #d8e6f2; font-size: 14.5px; transition: color .2s;">WhatsApp</a>
-          <a href="mailto:tiagoblink182@gmail.com" class="hv-white" style="color: #d8e6f2; font-size: 14.5px; transition: color .2s;">E-mail</a>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <span style="font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #9ab0c6;">Onde atuo</span>
-          <span style="color: #d8e6f2; font-size: 14.5px;">Onde vc estiver! Em todo o ambiente on-line!</span>
-        </div>
-      </div>
-    </div>
-    <div style="border-top: 1px solid #1b385b;"><div style="max-width: 1180px; margin: 0 auto; padding: 18px 28px; font-size: 13px; color: #9ab0c6;">© Tiago Bresolin. Feito pra vender mais no digital.</div></div>
-  </footer>
+  function whatsappUrl(message) {
+    return 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message);
+  }
 
-  <!-- FLOAT WHATSAPP -->
-  <a href="https://wa.me/5551993416111?text=Oi!%20Vi%20o%20seu%20portf%C3%B3lio%20e%20queria%20saber%20mais." target="_blank" rel="noopener" class="hv-lift float-wa pulsing-glow" aria-label="Falar no WhatsApp" style="position: fixed; right: 22px; bottom: 22px; z-index: 60; display: inline-flex; align-items: center; gap: 10px; background: #25d366; color: #073d34; font-weight: 700; font-size: 15px; padding: 13px 20px; border-radius: 999px; box-shadow: 0 14px 30px -8px rgba(37,211,102,.7); transition: transform .2s;">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="#073d34"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.85 9.85 0 001.599 5.283l-1 3.652 3.891-1.634zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>
-    WhatsApp
-  </a>
-</div>
+  document.querySelectorAll('[data-wa]').forEach(function (link) {
+    link.href = whatsappUrl(defaultMessage);
+  });
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  if (typingNodes.length && !reducedMotion) {
+    phone.classList.add('is-typing');
+    var typingLines = typingNodes.map(function (node) {
+      var text = node.textContent;
+      node.textContent = '';
+      return { node: node, text: Array.from(text) };
+    });
+
+    function typeLine(lineIndex) {
+      if (lineIndex >= typingLines.length) {
+        window.setTimeout(function () {
+          instantNodes.forEach(function (node) {
+            node.classList.remove('is-visible');
+          });
+          typingNodes.forEach(function (node) {
+            node.textContent = '';
+          });
+          phone.classList.remove('is-replying');
+          window.setTimeout(function () {
+            typeLine(0);
+          }, 450);
+        }, 3200);
+        return;
+      }
+
+      if (lineIndex === 1) phone.classList.add('is-replying');
+      var line = typingLines[lineIndex];
+      var charIndex = 0;
+      line.node.classList.add('type-cursor');
+
+      function typeCharacter() {
+        if (charIndex < line.text.length) {
+          var character = line.text[charIndex];
+          line.node.textContent += character;
+          charIndex++;
+
+          var delay = 45 + Math.random() * 55 + (character === ' ' ? 18 : 0);
+          if (/[,.!?…]/.test(character)) delay += 220 + Math.random() * 180;
+          window.setTimeout(typeCharacter, delay);
+          return;
+        }
+
+        line.node.classList.remove('type-cursor');
+        if (instantNodes[lineIndex]) instantNodes[lineIndex].classList.add('is-visible');
+        window.setTimeout(function () {
+          typeLine(lineIndex + 1);
+        }, lineIndex === 0 ? 500 : 350);
+      }
+
+      typeCharacter();
+    }
+
+    window.setTimeout(function () {
+      typeLine(0);
+    }, 500);
+  }
+
+  document.getElementById('diag').addEventListener('click', function () {
+    var selectedSituations = [].map.call(
+      document.querySelectorAll('.chk input:checked'),
+      function (input) {
+        return '- ' + input.value;
+      }
+    );
+    var message = selectedSituations.length
+      ? 'Oi, Tiago! Vi seu portfólio. No meu negócio hoje acontece isto:\n' +
+        selectedSituations.join('\n') +
+        '\n\nPodemos conversar?'
+      : defaultMessage;
+
+    window.open(whatsappUrl(message), '_blank', 'noopener');
+  });
+
+  var revealElements = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('on');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(function (element) {
+      revealObserver.observe(element);
+    });
+  } else {
+    revealElements.forEach(function (element) {
+      element.classList.add('on');
+    });
+  }
+})();
+</script>
 </body>
 </html>

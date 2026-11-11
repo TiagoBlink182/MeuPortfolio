@@ -160,8 +160,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 .hero em{color:#168bd2}
 .dark .btn{background:#168bd2;color:#09192e}.dark .btn:hover{background:#87caf5}
 .final .btn:not(.line){background:#fff;color:#075a9c}.final .btn:not(.line):hover{background:#cfeaff}
-/* mobile bar */
-.bar{display:none}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.rv.on{opacity:1;transform:none}
 @media(max-width:860px){
  section{padding:64px 0}.hero{padding:96px 0 36px}.hero-layout{grid-template-columns:1fr;gap:20px}.hero-copy h1{font-size:clamp(22px,5vw,32px)}.hero p.lead{margin-top:14px}.cta-row{margin-top:22px}.chat-demo{justify-self:center}nav .lk{display:none}
@@ -169,8 +167,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
  .svc article,.svc article+article{padding:26px 16px;border-left:0;border-bottom:1px solid var(--line)}
  .row{grid-template-columns:44px 1fr;gap:6px 16px}.row>div:last-child{grid-column:2}.row .n{font-size:26px}
  .about img{max-width:280px}
- .bar{display:block;position:fixed;inset:auto 0 0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(244,249,253,.96);border-top:1px solid var(--line)}
- .bar .btn{width:100%;justify-content:center}body{padding-bottom:78px}
 }
 @media(max-width:420px){
  header .wrap{padding-inline:16px}
@@ -184,7 +180,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 .wa-float::before{content:"";position:absolute;inset:0;z-index:0;border-radius:inherit;pointer-events:none;animation:wa-green-glow 3.6s ease-in-out infinite}
 @keyframes wa-green-glow{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}50%{box-shadow:0 0 20px 8px rgba(37,211,102,.65)}}
 .wa-float svg{position:relative;z-index:1;width:32px;height:32px;fill:currentColor}
-@media(max-width:860px){.wa-float{right:16px;bottom:calc(92px + env(safe-area-inset-bottom))}}
+@media(max-width:860px){.wa-float{right:16px;bottom:calc(16px + env(safe-area-inset-bottom))}}
 @media(hover:hover) and (prefers-reduced-motion:no-preference){
  .svc article.rv:hover,.steps li.rv:hover,#faq details:hover{transform:translateY(-5px);background-color:var(--paper2);box-shadow:inset 0 3px 0 #168bd2}
  .wa-float:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(9,25,46,.3)}
@@ -373,7 +369,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
  </div>
 </footer>
 
-<div class="bar"><a class="btn" href="#" data-wa target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Falar no WhatsApp</a></div>
 <a class="wa-float" href="#" data-wa target="_blank" rel="noopener" aria-label="Falar com Tiago pelo WhatsApp" title="Falar pelo WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg></a>
 
 <script>
